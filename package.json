@@ -1,0 +1,19 @@
+{
+  "name": "e-comerce-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts":{
+    "start": "sass --watch assets/scss/style.scss:assets/css/style.css"    
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "js": "^0.1.0",
+    "popper": "^1.0.1",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
