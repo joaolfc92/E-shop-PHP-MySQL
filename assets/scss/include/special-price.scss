@@ -1,0 +1,30 @@
+
+.item{
+    .img-fluid{
+        margin-bottom: 10px; 
+    }
+}
+
+#special-price{
+    .grid .grid-item{
+        margin-right: 1.2rem;
+        margin-top: 1rem;
+        border:1px solid #f0f0f0;
+
+    }
+}
+
+.banner-container{
+    height: 150px;
+    display: flex;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+}
+
+.banner-left,.banner-right{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    
+}
