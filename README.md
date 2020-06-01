@@ -7,3 +7,7 @@
 #Parte 02 - Página de Produtos
 
 ![screencapture-127-0-0-1-5500-product-html-2020-06-01-18_53_33](https://user-images.githubusercontent.com/46541402/83458893-b8476800-a439-11ea-9c8a-682bf75cfd00.png)
+
+#Parte 03 - Carrinho de compras
+
+![screencapture-127-0-0-1-5500-cart-html-2020-06-01-20_52_16](https://user-images.githubusercontent.com/46541402/83465361-0cf2df00-a44a-11ea-937d-89ea3ba17543.png)
