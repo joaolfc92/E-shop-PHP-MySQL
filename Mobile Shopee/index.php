@@ -59,7 +59,7 @@
 
             // include new phones
 
-            include("Template-home/..new-phones.php")
+            include("Template-home/new-phones.php")
 
             ?>  
 

@@ -1,12 +1,24 @@
 
             <!--product-->
 
+
+            <?php
+
+            $item_id = $_GET['item_id'] ?? 1;
+            
+            foreach($product->getData() as $item):
+
+            if($item['item_id']==$item_id):
+
+
+            ?>
+
                 <section id="product" class="py-3 mb-5">
 
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="assets/image/products/1.png" alt="product" class="img-fluid">
+                                <img src="<?php echo $item['item_image']   ?? "./assets/products/1.png";  ?>" alt="product" class="img-fluid">
                                 <div class="form-row pt-4 font-size-16 font-baloo">
                                     <div class="col">
                                         <button type="submit" class="btn-danger form-control">Proceed to Buy</button>
@@ -20,8 +32,8 @@
 
 
                             <div class="col-sm-6">
-                                   <h4 class="font-baloo font-size-20 mt-5">Sansung Galaxy 10</h4>
-                                   <small>by Sansung</small>
+                                   <h4 class="font-baloo font-size-20 mt-5"><?php echo $item['item_name'] ?? 'Não encontrado' ?></h4>
+                                   <small><?php echo $item['item_brand'] ?? 'Não encontrado' ?></small>
                                    <div class="d-flex">
                                         <div class="rating text-warning font-size-12">
                                             <span><i class="fa fa-star"></i></span>
@@ -44,7 +56,7 @@
                                     <table class="my-3">
                                         <tr class="font-rale font-size-14">
                                               <td>M.R.P</td>  
-                                              <td><strike>$162,00</strike></td>
+                                              <td><strike>$162</strike></td>
                                         </tr>
                                     </table>
                                     
@@ -52,7 +64,7 @@
                                     <table class="my-3">    
                                         <tr class="font-size-20">
                                               
-                                            <p>Deal Price: <span class="text-danger">$ 152,00 </span> <small>inclusive all taxes</small>  </p>
+                                            <p>Deal Price: <span class="text-danger"><?php echo $item['item_price'] ?> </span> <small>inclusive all taxes</small>  </p>
 
                                             <p class="font-size-12">You Save <span class="text-danger">$ 10,00 </span>   </p>
                                                
@@ -196,7 +208,12 @@
 
                 </section>
 
+            <?php
 
+            endif;
+            endforeach;
+
+            ?>
 
 
 

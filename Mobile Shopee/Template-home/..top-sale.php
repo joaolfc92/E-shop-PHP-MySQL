@@ -2,7 +2,8 @@
 
  <?php
 
-        $product_shuffle = $product->getData()
+        $product_shuffle = $product->getData();
+        shuffle($product_shuffle);
 
 ?>
 
@@ -20,7 +21,7 @@
                 <div class="item py-2">
 
                     <div class="product font-rale">
-                        <a href="#" style="text-decoration: none;">
+                        <a href="<?php printf('%s?item_id=%s', 'product.php', $item['item_id']);   ?>" style="text-decoration: none;">
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/1.png"; ?>" alt="product1" class="img-fluid">
                         </a>                
                             <div class="text-center">
