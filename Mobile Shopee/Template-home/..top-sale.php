@@ -5,6 +5,14 @@
         $product_shuffle = $product->getData();
         shuffle($product_shuffle);
 
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if(isset($_POST['top_sale_submit'])){
+                $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+            }
+           
+        }
+
 ?>
 
  <section id="top-sale">
@@ -38,7 +46,11 @@
                                         <span><?php echo $item['item_price'] ?? "Não definido";  ?></span>
                                     </div>
 
-                                    <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                                   <form action="" method="post">
+                                        <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
+                                        <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                        <button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                                   </form>
                             </div>
                                     
                     </div>

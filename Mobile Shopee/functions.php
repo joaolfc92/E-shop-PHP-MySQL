@@ -10,6 +10,11 @@ require('database/DBController.php');
 
 require('database/Product.php');
 
+
+// require cart class
+
+require('database/Cart.php');
+
 // DBController object
 
 $db = new DBController();
@@ -19,6 +24,9 @@ $db = new DBController();
 $product = new Product($db);
 
 
+// cart object
+
+$Cart = new Cart($db);
 
 
 
