@@ -16,6 +16,9 @@
        
     }
 
+
+    $in_cart = $Cart->getCartId($product->getData('cart'));
+
 ?>
 
 
@@ -38,7 +41,7 @@
 
 
                         <div class="grid">
-                        <?php array_map(function($item){?>
+                        <?php array_map(function($item)use($in_cart){?>
                             <div class="grid-item  m-2 <?php echo $item['item_brand'] ?? "Brand"; ?> ">    
                                 <div class="item py-2" style="width: 200px;">    
                                     <div class="product font-rale">
@@ -61,7 +64,25 @@
                                         <form action="" method="post">
                                             <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
                                             <input type="hidden" name="user_id" value="<?php echo 1; ?>">
-                                            <button type="submit" name="special_price_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                                            
+
+
+
+                                         <?php   
+
+
+                                            if (in_array($item['item_id'],$in_cart)){
+                                                echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                                            }else{
+                                                echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                                            }
+
+
+                                        ?>
+
+
+
+
                                         </form>
                                         </div>
                                     </a>

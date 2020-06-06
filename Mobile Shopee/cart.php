@@ -1,7 +1,7 @@
 <?php
 
 //include header.php file
-
+    ob_start();
     include('header.php')
 
 ?>
@@ -15,10 +15,14 @@
 
         // inclide cart 
 
-        include("Template-cart/..product-cart.php")
+        include("Template-cart/..product-cart.php");
 
+        include("Template-cart/..wishilist.php");
 
+        include("Template-home/new-phones.php");
+        
     ?>
+
 
 
 </main>
